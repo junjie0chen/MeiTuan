@@ -1,0 +1,118 @@
+.choose-wrap {
+  display: inline-block;
+  // 选择框
+  .choose {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 20px;
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    width: 150px;
+    height: 40px;
+    vertical-align: middle;
+    font-size: 14px;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+    // 下三角
+    i {
+      position: absolute;
+      top: 0;
+      right: 4px;
+      bottom: 0;
+      margin: auto 0;
+      height: 10px;
+      font-size: 12px;
+      color: #666;
+    }
+    // 下拉框
+    .mt-content {
+      h4 {
+        margin-bottom: 11px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #ccc;
+      }
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      padding: 20px 0 20px 15px;
+      min-width: 265px;
+      height: 375px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      box-sizing: border-box;
+      background-color: #fff;
+      z-index: 1;
+
+      &.active {
+        display: block;
+      }
+      // 上三角
+      &::before {
+        content: "";
+        position: absolute;
+        top: -7px;
+        left: 26px;
+        border: 6px solid transparent;
+        border-bottom-color: #E5E5E5;
+        border-top: none;
+        
+      }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 26px;
+        border: 6px solid transparent;
+        border-bottom-color: #fff;
+        border-top: none;
+
+        
+        clear: both;
+      }
+      .wrapper {
+        white-space: nowrap;
+        &::after {
+          display: block;
+          content: '';
+          height: 0;
+          clear: both;
+        }
+        
+        // 具体省份城市
+        .col {
+          display: table-cell;
+        	.mt-item {
+            display: block;
+            margin: 6px 38px 6px 0;
+            padding: 1px 8px;
+            min-width: 40px;
+        		height: 20px;
+            box-sizing: border-box;
+        		font-size: 12px;
+        		color: #666;
+        		cursor: pointer;
+            
+            // 当前选中的
+        		&.active {
+              border-radius: 10px;
+        			background: #13D1BE;
+        			color: #fff;
+            }
+            &:hover {
+              color: #13D1BE;
+            }
+          }
+        }
+      }
+    }
+  }
+}

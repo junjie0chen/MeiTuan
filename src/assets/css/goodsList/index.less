@@ -1,0 +1,46 @@
+@import "./crumbs.less";
+@import "./category.less";
+@import "./select.less";
+@import "./list.less";
+@import "./item.less";
+
+.page-goodsList {
+  padding-top: 10px;
+  font-size: 14px;
+
+  .right {
+    position: relative;
+    margin-left: 10px;
+    width: 230px;
+    height: 100%;
+
+    .map {
+      width: 230px;
+      height: 220px;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background: url("~@/assets/images/goodsList/map.jpg") no-repeat;
+      background-size: contain;
+    }
+
+    .youlike {
+      margin-top: 10px;
+      padding: 16px 20px 0;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      background-color: #fff;
+      .title {
+        display: inline-block;
+        margin-bottom: 12px;
+        width: 100%;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+      }
+    }
+  }
+}
